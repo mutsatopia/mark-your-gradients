@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gradation</title>
+</head>
+<style></style>
+
+<body>
+  <!-- header -->
+  <section>
+    <div id="container">
+      <input type="button" value="클릭 !!" onclick="document.getElementById('time').innerHTML = Date()" />
+      <div id="time"></div>
+      <button>추가</button>
+    </div>
+  </section>
+  <script>
+    // function init() {
+    //   //localStorage 데이터 추가방법
+    //   localStorage.Color = "sample";
+    //   //localStorage 데이터 취득
+    //   // var val = localStorage.Test;
+    //   // //취득 데이터 출력
+    //   // document.querySelector("#result").innerHTML = val;
+
+    // }
+    // function color_show {
+    //   var val = localStorage.getItem()
+    //   //화면에 색상 추가
+    //   document.querySelector("#result").innerHTML = val;
+
+    // }
+    // console.log(window.location.search);
+
+    // 선택한 색상 저장
+    const color_btn = document.querySelector('button');
+    // const store_date =
+    color_btn.onclick = function () {
+      console.log(`선택한 그라데이션: color, 추가한 날짜 `);
+      // ${}객체는 키의 중복을 허용하지 않는다. 따라서 키가 중복되면 하나빼고 다 사라짐
+      // 키: 현재 날짜와 시간 값: 색상
+      // id : 현재시간(ms)
+      // 로컬스토리지에서 하령님
+      // 백그라운드 값 코드 자체 - >
+
+      // if (localStorage.getItem(
+    };
+  </script>
+</body>
+
+</html>
