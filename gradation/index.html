@@ -75,14 +75,10 @@
           <p class="content">linear-gradient(<strong>to right</strong>, <strong>#ee9ca7</strong>, <strong>#ffdde1</strong>);</p>
         </div>
         <button class="modal-btn">CLICK TO COPY</button>
-        <button onclick="myFunction()" class="btn-close"></button>
+        <button class="btn-close"></button>
       </div>
+      <button class="btn-show dis-none">Display CSS Code</button>
     </main>
-    <script>
-      const close = document.getElementsByClassName('btn-close');
-      close.addEventListner('click', () => {
-        modal.classList.remove('modal-container');
-      });
-    </script>
+    <script src="../src/js/gradientDetail.js"></script>
   </body>
 </html>

@@ -69,25 +69,25 @@ h3 {
 }
 .modal-content .content-title {
   margin-right: 10px;
-  color: #2AA198;
+  color: #2aa198;
 }
 .modal-content .content {
-  color: #476DA5;
+  color: #476da5;
 }
 .modal-content .content strong {
-  color: #D33682;
+  color: #d33682;
 }
 .modal-btn {
   padding: 8px 20px;
   border-radius: 5px;
-  background-color: #148f77;
+  background-color: #12cea8;
   color: #fff;
   font-weight: 700;
   vertical-align: top;
+  transition: all 0.2s ease-in-out;
 }
 .modal-btn:hover {
   background-color: #31e2bf;
-  transition: all 0.2s ease-in-out;
 }
 .btn-close {
   display: block;
@@ -105,4 +105,24 @@ h3 {
 .btn-close:hover {
   transform: scale(1.25);
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-show {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: #12cea8;
+  color: #fff;
+  font-weight: 700;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in-out;
+}
+.btn-show:hover {
+  background-color: #31e2bf;
+}
+
+.dis-none {
+  display: none;
 }
