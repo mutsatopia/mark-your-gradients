@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../src/css/components.css" />
+  <title>Test</title>
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #sect {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 500px;
+      background-color: yellow;
+    }
+
+    article {
+      border: 1px solid rgb(143, 143, 143);
+      height: 100%;
+      margin-bottom: 5px;
+    }
+
+    .art {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: rgb(240, 200, 240);
+    }
+
+    .color-name {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="sect"></section>
+  <script>
+    function palette_generate() {
+      // let numArray = [];
+      let numArray = [1, 2, 3, 4];
+      // console.log(numArray.length);
+      if (numArray == 0) {
+        let Area = document.getElementById('sect');
+        let h3_tag = document.createElement('h3');
+        h3_tag.innerHTML = '저장한 Color가 없습니다.';
+        Area.appendChild(h3_tag);
+      } else {
+        for (var i of numArray) {
+          console.log(`${i}`);
+          let Area = document.getElementById('sect');
+          let newArticle = document.createElement('article');
+          let newDiv = document.createElement('div');
+          newArticle.setAttribute('class', 'art');
+          var newArticle_Style = "background: linear-gradient(to bottom, #33ccff 0%, #ff66ff 100%);";
+          newArticle.setAttribute("style", newArticle_Style);
+          newDiv.setAttribute('class', 'color-name');
+          newDiv.innerHTML = `${i}`;
+          console.log('스타일 적용되란말이야');
+          //스타일 양끝점 추가
+          Area.appendChild(newArticle);
+          newArticle.appendChild(newDiv);
+          // var newArticle_Style = "background: linear-gradient(to bottom, #33ccff 0%, #ff66ff 100%);";
+          // newArticle.setAttribute("style", newArticle_Style)
+        }
+      }
+    }
+    // data개수만큼 칸 생성 및 색명 추가
+    palette_generate();
+  </script>
+</body>
+
+</body>
+
+</html>
