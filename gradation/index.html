@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Detail</title>
+  <link rel="stylesheet" href="../src/css/components.css">
+  <link rel="stylesheet" href="../src/css/screen/gradientDetail.css">
 </head>
-  <body>
-    asdf
-    <script>
-      console.log(window.location.search);
-    </script>
-  </body>
+
+<body>
+  <main class="main-color">
+    <div class="color-name">
+      Piggy Pink
+    </div>
+    <ul class="list-change">
+      <li><a href="javacscript:void(0)"> <img class="btn btn-back" src="../src/img/previous.png" alt="뒤로가기"></a>
+      <li><a href="javacscript:void(0)"> <img class="btn btn-next" src="../src/img/next.png" alt="다음으로 가기"> </a>
+    </ul>
+    <div class="modal-container">
+      <h3 class="modal-titile">
+        Copy CSS Code
+      </h3>
+      <div class="modal-content">
+        <p> code 가 들어갑니다.. </p>
+      </div>
+      <button class="modal-btn">CLICK TO COPY</button>
+      <button onclick="myFunction()" class="btn-close"></button>
+    </div>
+  </main>
+  <script>
+    const close = document.getElementsByClassName('btn-close')
+    close.addEventListner('click', () => {
+      modal.classList.remove('modal-container')
+    })
+  </script>
+</body>
+
 </html>
