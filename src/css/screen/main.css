@@ -1,5 +1,71 @@
 @import "../components.css";
 
-div {
+/* header */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: rgb(226, 226, 226);
+  z-index: 10;
+}
+
+/* main section1 */
+.list-minibox{
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10px;
+  margin-top: 70px;
+}   
+.list-minibox li{
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.list-minibox li button{
+  height: 45px;
+  width: 80px;
+  border-radius: 35px;
+}
+.list-minibox li:hover button{
+  transform: translateY(-2px);
+  box-shadow: 3px 5px 3px black;
+}
+
+/* main section2 */
+.list-mainbox{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 10px;
+  background-color: rgb(255, 254, 254);
+}
+
+.list-mainbox li{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+  margin: 10px;
+  background-color: rgba(207, 197, 197, 0.8);
+  border-radius: 5px;
+}
+
+.list-mainbox li:hover{
+  box-shadow: 10px 10px 10px black;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.list-mainbox li .box-txt{
+  display: none;
+}
+.list-mainbox li .box-txt:hover{
+  display: inline-block;
+  height: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 5px;
 }
