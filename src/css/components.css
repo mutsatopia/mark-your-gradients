@@ -1,9 +1,8 @@
-@import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 /* font-family: 'Noto Sans KR', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
 /* font-family: 'Lakki Reddy', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 /* font-family: 'Noto Sans', sans-serif; */
 
 body {
@@ -16,6 +15,7 @@ body {
   right: 0;
   border-bottom: 2px solid #eee;
   background-color: #fff;
+  z-index: 100;
 }
 .header h1 {
   display: flex;
