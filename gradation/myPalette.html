@@ -5,50 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../src/css/reset.css" />
   <link rel="stylesheet" href="../src/css/components.css" />
-  <title>Test</title>
-  <style>
-    body {
-      height: 100%;
-      width: 100%;
-    }
-
-    #sect {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 500px;
-      background-color: yellow;
-    }
-
-    article {
-      border: 1px solid rgb(143, 143, 143);
-      height: 100%;
-      margin-bottom: 5px;
-    }
-
-    .art {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      background-color: rgb(240, 200, 240);
-    }
-
-    .color-name {
-      font-size: 16px;
-      font-weight: 700;
-    }
-  </style>
+  <link rel="stylesheet" href="../src/css/myPalette.css" />
 </head>
 
 <body>
   <section id="sect"></section>
   <script>
     function palette_generate() {
-      // let numArray = [];
-      let numArray = [1, 2, 3, 4];
+      let numArray = [];
+      // let numArray = [1, 2, 3, 4,5,6];
       // console.log(numArray.length);
       if (numArray == 0) {
         let Area = document.getElementById('sect');
