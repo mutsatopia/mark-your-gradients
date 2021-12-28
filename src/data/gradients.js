@@ -305,47 +305,47 @@ const data = [
     "colors": ["#2BC0E4", "#EAECC6"]
   },
   {
-    "id": 6,
+    "id": 61,
     "name": "Moss",
     "colors": ["#134E5E", "#71B280"]
   },
   {
-    "id": 6,
+    "id": 62,
     "name": "Shroom Haze",
     "colors": ["#5C258D", "#4389A2"]
   },
   {
-    "id": 6,
+    "id": 63,
     "name": "Mystic",
     "colors": ["#757F9A", "#D7DDE8"]
   },
   {
-    "id": 6,
+    "id": 64,
     "name": "Between Night and Day",
     "colors": ["#2c3e50", "#3498db"]
   },
   {
-    "id": 6,
+    "id": 65,
     "name": "Timber",
     "colors": ["#fc00ff", "#00dbde"]
   },
   {
-    "id": 6,
+    "id": 66,
     "name": "Passion",
     "colors": ["#e53935", "#e35d5b"]
   },
   {
-    "id": 6,
+    "id": 67,
     "name": "Clear Sky",
     "colors": ["#005C97", "#363795"]
   },
   {
-    "id": 6,
+    "id": 68,
     "name": "Master Card",
     "colors": ["#f46b45", "#eea849"]
   },
   {
-    "id": 6,
+    "id": 69,
     "name": "Back To Earth",
     "colors": ["#00C9FF", "#92FE9D"]
   }
