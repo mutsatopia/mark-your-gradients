@@ -1,8 +1,104 @@
-@import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 /* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
+/* font-family: 'Lakki Reddy', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  letter-spacing: -1px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #eee;
+  background-color: #fff;
+  z-index: 100;
+}
+.header h1 {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 15px 0 0 30px;
+  border-bottom: 2px solid #eee;
+}
+.header .link-logo {
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 30px;
+  vertical-align: bottom;
+}
+.header > .container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 38px;
+}
+.header > .container-nav > div {
+  display: flex;
+}
+.header .container-colors > p {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.header .container-colors > p:hover {
+  background-color: #eee;
+}
+.header .container-colors > img {
+  width: 16px;
+  margin: 0 4px;
+}
+.header .list-icon {
+  display: flex;
+  position: absolute;
+  right: 35px;
+}
+.list-icon li {
+  position: relative;
+  margin-left: 28px;
+}
+.list-icon .btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.list-icon button.btn-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -14px;
+  height: 30px;
+  width: 1px;
+  background-color: #eee;
+}
+.list-icon .btn-icon:hover {
+  background-color: #eee;
+}
+.list-icon img {
+  width: 20px;
+}
+.list-icon span {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  padding: 4px 6px;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+.list-icon li .btn-icon:hover + span {
+  display: block;
 }
