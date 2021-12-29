@@ -83,7 +83,6 @@ h3 {
   color: #fff;
   font-weight: 700;
   vertical-align: top;
-  transition: all 0.2s ease-in-out;
 }
 .modal-btn:hover {
   background-color: #31e2bf;
