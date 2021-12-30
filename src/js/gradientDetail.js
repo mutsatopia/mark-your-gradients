@@ -11,10 +11,13 @@ openBtn.addEventListener('click', () => {
   openBtn.classList.add('dis-none');
 });
 
-const gradientName = location.hash.substring(1);
-const gradientData = data.find((value) => value.name === gradientName);
+let gradientName = location.hash.substring(1);
+let gradientData = data.find(
+  (value) => value.name.replace(/ /g, '') === gradientName,
+);
 
 const colorCode = document.querySelectorAll('.value-color');
+
 colorCode.forEach((value, index) => {
   value.innerText = gradientData.colors[index];
 });
@@ -39,7 +42,8 @@ const linkDataArr = [preColorName, nextColorName];
 
 const pageLink = document.querySelectorAll('.link-page');
 pageLink.forEach((value, index) => {
-  value.href = `http://localhost:5500/gradation/#${linkDataArr[index]}`;
+  if (!linkDataArr[index]) value.style.display = 'none';
+  else value.href = `http://localhost:5500/gradation/#${linkDataArr[index]}`;
 });
 
 const rotateBtn = document.querySelector('.rotate-btn');
@@ -65,5 +69,12 @@ modalBtn.addEventListener('click', () => {
 
   tempElem.select();
   document.execCommand('copy');
-  alert('복사되었습니다!')
+  alert('복사되었습니다!');
+});
+
+pageLink.forEach((ele, index) => {
+  ele.addEventListener('click', () => {
+    location.assign(`http://localhost:5500/gradation/#${linkDataArr[index]}`);
+    location.reload();
+  });
 });
