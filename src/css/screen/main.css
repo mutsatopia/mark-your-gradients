@@ -1,14 +1,13 @@
 @import "../components.css";
 
-/* header */
-
 /* main section1 */
 .list-minibox{
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 10px;
-  margin-top: 70px;
+  margin-top: 100px;
 }   
 .list-minibox li{
   display: inline-block;
@@ -23,13 +22,13 @@
 .list-minibox li:hover .btn-colorSelct{
   transform: translateY(-2px);
   box-shadow: 3px 5px 3px black;
-}
+} 
 
 /* main section2 */
 .list-mainbox{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   padding: 10px;
   background-color: rgb(255, 254, 254);
 }
@@ -37,8 +36,9 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 150px;
-  margin: 10px;
+  height: 200px;
+  min-width: 150px;
+  margin: 10px 20px;
   background-color: rgba(207, 197, 197, 0.8);
   border-radius: 5px;
 }
