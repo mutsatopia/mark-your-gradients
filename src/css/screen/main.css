@@ -47,14 +47,15 @@
   transform: translateY(-3px);
   cursor: pointer;
 }
-
 .list-mainbox li .box-txt{
-  display: none;
-}
-.list-mainbox li .box-txt:hover{
   display: inline-block;
   height: 20px;
   padding: 10px 20px;
-  background-color: white;
   border-radius: 5px;
+  opacity: 0;
+}
+.list-mainbox li:hover .box-txt{
+  color: rgb(51, 50, 50);
+  background-color: rgba(255, 255, 255, 0.699);
+  opacity: 1;
 }
