@@ -12,7 +12,7 @@ const colorMiniArray = [
 ];
 const colorMiniBtn = document.querySelectorAll('.list-minibox li button');
 const colorMainBox = document.querySelectorAll('.list-mainbox li');
-// const colorNameBox = colorMainBox.querySelector('.box-txt')
+
 // defualt color
 let i = 0;
 while (i < colorMiniArray.length) {
@@ -24,18 +24,10 @@ while (i < colorMiniArray.length) {
 i = 0;
 colorMainBox.forEach((box, i) => {
   const defaultData = data
-    .filter((d) => d.id === i)
-    .map(function(obj){
-      const defualtObj = {};
-      defualtObj.name = obj.name;
-      defualtObj.colors = obj.colors;
-      return defualtObj;
-    });
-  // const defaultData = data.filter((d) => d.id === i).map((d) => d.colors);
-  console.log(defaultData)
+    .filter((d) => d.id === i)[0];
   const colorNameTxt = box.querySelector('.box-txt');
-  box.style.background = `linear-gradient(to right, ${defaultData[0].colors[0]}, ${defaultData[0].colors[1]})`;
-  colorNameTxt.innerHTML = `${defaultData[0].name}`
+  box.style.background = `linear-gradient(to right, ${defaultData.colors[0]}, ${defaultData.colors[1]})`;
+  colorNameTxt.innerHTML = `${defaultData.name}`;
 });
 
 //main color box
@@ -56,5 +48,32 @@ colorMiniBtn.forEach((button, index) => {
       const colorNameTxt = ele.querySelector('.box-txt');
       colorNameTxt.innerHTML = `${selecData[index].name}`;
     });
+  });
+});
+
+// rotate
+const rotate_Btn = document.querySelector('.rotate-btn');
+const rotate_Direction = ['to right', 'to bottom', 'to left', 'to top'];
+let rotateIndex = 0;
+rotate_Btn.addEventListener('click', () => {
+  colorMainBox.forEach((ele) => {
+    let mainBoxColorName = ele.textContent;
+    mainBoxColorName = mainBoxColorName.trim();
+    let selecColor = data
+      .filter((s) => s.name === mainBoxColorName)
+      .map((s) => s.colors);
+    ele.style.background = `linear-gradient(${
+      rotate_Direction[++rotateIndex % 4]
+    }, ${selecColor[0][0]}, ${selecColor[0][1]})`;
+  });
+});
+
+// page
+colorMainBox.forEach((ele, index) => {
+  ele.addEventListener('click', () => {
+    let getName = ele.innerText;
+    getName = getName.replace(/(\s*)/g, "");
+    console.log(getName);
+    location.assign(`http://localhost:5500/gradation/#${getName}`);
   });
 });
