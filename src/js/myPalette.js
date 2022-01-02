@@ -3,11 +3,11 @@ function palette_generate() {
   let nameKey = 'color';
   let arrValue = {};
   // console.log(colorArray);
-  if (colorArray.length > 0) {
+  if (colorArray && colorArray.length > 0) {
     arrValue = JSON.parse(colorArray);
     console.log(Object.keys(arrValue));
   }
-  if (arrValue.length == 0) {
+  if (arrValue && arrValue.length == 0) {
     let Area = document.getElementById('sect');
     let h3_tag = document.createElement('h3');
     h3_tag.innerHTML = '저장한 Color가 없습니다.';
