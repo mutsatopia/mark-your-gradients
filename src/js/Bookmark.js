@@ -4,7 +4,7 @@ function local_store() {
   let output = localStorage.getItem('color');
   let nameKey = 'color';
   let arrValue = {};
-  if (output.length > 0) {
+  if (output && output.length > 0) {
     arrValue = JSON.parse(output);
     console.log(Object.keys(arrValue));
   }
