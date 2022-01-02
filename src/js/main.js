@@ -73,6 +73,6 @@ colorMainBox.forEach((ele, index) => {
   ele.addEventListener('click', () => {
     let getName = ele.innerText;
     getName = getName.replace(/(\s*)/g, '');
-    location.assign(`http://localhost:${PORT}/gradation/#${getName}`);
+    location.assign(`${URL_CONSTANT}/gradation/#${getName}`);
   });
 });

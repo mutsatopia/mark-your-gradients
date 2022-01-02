@@ -43,7 +43,7 @@ const linkDataArr = [preColorName, nextColorName];
 const pageLink = document.querySelectorAll('.link-page');
 pageLink.forEach((value, index) => {
   if (!linkDataArr[index]) value.style.display = 'none';
-  else value.href = `http://localhost:${PORT}/gradation/#${linkDataArr[index]}`;
+  else value.href = `${URL_CONSTANT}/gradation/#${linkDataArr[index]}`;
 });
 
 const rotateBtn = document.querySelector('.rotate-btn');
@@ -74,7 +74,7 @@ modalBtn.addEventListener('click', () => {
 
 pageLink.forEach((ele, index) => {
   ele.addEventListener('click', () => {
-    location.assign(`http://localhost:${PORT}/gradation/#${linkDataArr[index]}`);
+    location.assign(`${URL_CONSTANT}/gradation/#${linkDataArr[index]}`);
     location.reload();
   });
 });
