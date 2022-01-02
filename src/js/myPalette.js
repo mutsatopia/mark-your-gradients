@@ -11,7 +11,7 @@ function palette_generate() {
   if (arrValue && Object.keys(arrValue).length == 0) {
     let Area = document.getElementById('sect');
     let h3_tag = document.createElement('h3');
-    h3_tag.innerHTML = '저장한 Color가 없습니다.';
+    h3_tag.innerHTML = '저장한 Color가 없습니다';
     Area.appendChild(h3_tag);
   } else {
     for (var i of Object.keys(arrValue)) {
@@ -32,3 +32,22 @@ function palette_generate() {
 }
 // data개수만큼 칸 생성 및 색명 추가
 palette_generate();
+
+const trashAll = document.querySelector('.trashAll-btn');
+trashAll.addEventListener('click', () => {
+  localStorage.clear(); //로컬스토리지 전부다 삭제
+  console.log('------');
+  alert('전부 삭제되었습니다');
+  const allThrow = document.querySelectorAll('.art article');
+  console.log(allThrow);
+  for (const i = 0; i < allThrow.length; i++) {
+    const item = allThrow.item(i);
+    item.remove();
+    console.log(i);
+  }
+  console.log(allThrow);
+  let Area = document.getElementById('sect');
+  let h3_tag = document.createElement('h3');
+  h3_tag.innerHTML = '저장한 Color가 없습니다';
+  Area.appendChild(h3_tag);
+});
