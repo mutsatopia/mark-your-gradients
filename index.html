@@ -5,15 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mark your Gradients</title>
-    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="../src/css/reset.css" />
+    <!-- <link rel="stylesheet" href="../src/css/components.css" /> -->
     <link rel="stylesheet" href="./src/css/screen/main.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <h1><a href="/index.html" class="link-logo">myGradients</a></h1>
+      <div class="container-nav">
+        <ul class="list-icon">
+          <li>
+            <a href="javascript:void(0)" class="link-icon btn-icon"
+              ><img src="/src/img/palette.svg" alt="나의 팔래트로 이동" /></a
+            ><span>To my palette</span>
+          </li>
+          <li>
+            <button type="button" class="btn-icon">
+              <img
+                src="/src/img/bookmark-add.svg"
+                alt="그래디언트 추가"
+              /></button
+            ><span>Add gradient</span>
+          </li>
+          <li>
+            <button type="button" class="btn-icon rotate-btn">
+              <img
+                src="/src/img/rotate-arrow.svg"
+                alt="그래디언트 회전"
+              /></button
+            ><span>Rotate gradient</span>
+          </li>
+        </ul>
+      </div>
+    </header>
     <main>
       <section>
         <ul class="list-minibox">
-          <li><button class="btn-colorSelct"></button></li>
           <li><button class="btn-colorSelct"></button></li>
           <li><button class="btn-colorSelct"></button></li>
           <li><button class="btn-colorSelct"></button></li>
@@ -54,16 +81,8 @@
           <li>
             <span class="box-txt"></span>
           </li>
-          <li>
-            <span class="box-txt"></span>
-          </li>
-          <li>
-            <span class="box-txt"></span>
-          </li>
-          <li>
-            <span class="box-txt"></span>
-          </li>
         </ul>
+        <script src="./src/data/gradients.js"></script>
         <script src="./src/js/main.js"></script>
       </section>
     </main>
