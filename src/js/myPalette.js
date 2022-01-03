@@ -15,18 +15,27 @@ function palette_generate() {
     Area.appendChild(h3_tag);
   } else {
     for (var i of Object.keys(arrValue)) {
+      console.log('---------');
       console.log(`${i}`);
       let Area = document.getElementById('sect');
       let newArticle = document.createElement('article');
       let newDiv = document.createElement('div');
+      let newA = document.createElement('a');
       newArticle.setAttribute('class', 'art');
-      // console.log(arrValue[i])
-      // newArticle.setAttribute('style', newArticle_Style);
-      newArticle.style.background = arrValue[i];
       newDiv.setAttribute('class', 'color-name');
+      // console.log(arrValue[i]);
+      // newArticle.setAttribute('style', newArticle_Style);
       newDiv.innerHTML = `${i}`;
+      newArticle.style.background = arrValue[i];
+      newA.setAttribute('class', 'aStyle');
+      link_color = i.replace(/ /g, '');
+      // console.log('---------');
+      // console.log(i);
+      newA.setAttribute('href', `${URL_CONSTANT}/gradation/#${link_color}`);
+
       Area.appendChild(newArticle);
-      newArticle.appendChild(newDiv);
+      newArticle.appendChild(newA);
+      newA.appendChild(newDiv);
     }
   }
 }
