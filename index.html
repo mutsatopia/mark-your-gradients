@@ -1,19 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark-your-gradients</title>
-    <link rel="stylesheet" href="src/css/screen/main.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark your Gradients</title>
+    <link rel="stylesheet" href="../src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/screen/main.css" />
+  </head>
   <body>
-    <h1>our gradients</h1>
-    <div>
-      <h2 style="margin-top: 30px;">css 컨벤션</h2>
-      <img src="src/img/css-convention.jpg" alt="css 컨벤션" style="width: 30vw;">
-      <a href="/gradation">to sample</a>
-    </div>
-    <script src="src/js/sample.js"></script>
+    <header class="header">
+      <h1><a href="/index.html" class="link-logo">myGradients</a></h1>
+      <div class="container-nav">
+        <ul class="list-icon">
+          <li>
+            <a href="../gradation/myPalette.html" class="link-icon btn-icon"
+              ><img src="/src/img/palette.svg" alt="나의 팔래트로 이동" /></a
+            ><span>To my palette</span>
+          </li>
+          <li>
+            <button type="button" class="btn-icon rotate-btn">
+              <img
+                src="/src/img/rotate-arrow.svg"
+                alt="그래디언트 회전"
+              /></button
+            ><span>Rotate gradient</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section>
+        <ul class="list-minibox">
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+          <li><button class="btn-colorSelct"></button></li>
+        </ul>
+      </section>
+      <section class="container-main">
+        <ul class="list-mainbox">
+          <li>
+            <span class="box-txt">color name</span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+          <li>
+            <span class="box-txt"></span>
+          </li>
+        </ul>
+        <script src="./src/js/url.js"></script>
+        <script src="./src/data/gradients.js"></script>
+        <script src="./src/js/main.js"></script>
+      </section>
+    </main>
   </body>
 </html>

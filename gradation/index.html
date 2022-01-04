@@ -1,15 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Detail</title>
+    <link rel="stylesheet" href="../src/css/reset.css" />
+    <link rel="stylesheet" href="../src/css/components.css" />
+    <link rel="stylesheet" href="../src/css/screen/gradientDetail.css" />
+  </head>
   <body>
-    asdf
-    <script>
-      console.log(window.location.search);
-    </script>
+    <header class="header">
+      <h1><a href="/index.html" class="link-logo">myGradients</a></h1>
+      <div class="container-nav">
+        <div class="container-colors">
+          <p class="value-color"></p>
+          <img src="/src/img/right-arrow.svg" alt="색깔 방향 이미지" />
+          <p class="value-color"></p>
+        </div>
+        <ul class="list-icon">
+          <li>
+            <a href="../gradation/myPalette.html" class="link-icon btn-icon"
+              ><img src="/src/img/palette.svg" alt="나의 팔래트로 이동" /></a
+            ><span>To my palette</span>
+          </li>
+
+          <li>
+            <button onclick="local_store()" type="button" class="btn-icon">
+              <img
+                src="/src/img/bookmark-add.svg"
+                alt="그래디언트 추가"
+              /></button
+            ><span>Add gradient</span>
+          </li>
+          <li>
+            <button type="button" class="btn-icon rotate-btn">
+              <img
+                src="/src/img/rotate-arrow.svg"
+                alt="그래디언트 회전"
+              /></button
+            ><span>Rotate gradient</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="main-color">
+      <h2 class="color-title">
+        <p class="color-name"></p>
+        <span class="sr-only">color name</span>
+      </h2>
+      <ul class="list-change">
+        <li>
+          <a href="#" class="link-page">
+            <img
+              class="btn btn-back"
+              src="../src/img/arrow-left.svg"
+              alt="뒤로가기"
+          /></a>
+        </li>
+        <li>
+          <a href="javacscript:void(0)" class="link-page" id="store-data">
+            <img
+              class="btn btn-next"
+              src="../src/img/arrow-right.svg"
+              alt="다음으로 가기"
+            />
+          </a>
+        </li>
+      </ul>
+
+      <div class="modal-container">
+        <h3 class="modal-titile">Copy CSS Code</h3>
+        <div class="modal-content">
+          <p class="content-title">background:</p>
+          <p class="content"></p>
+        </div>
+        <button class="modal-btn">CLICK TO COPY</button>
+        <button class="btn-close"></button>
+      </div>
+      <button class="btn-show dis-none">Display CSS Code</button>
+    </main>
+    <script src="../src/js/url.js"></script>
+    <script src="../src/data/gradients.js" type="text/javascript"></script>
+    <script src="../src/js/gradientDetail.js"></script>
+    <script src="../src/js/Bookmark.js"></script>
   </body>
 </html>
+
