@@ -6,6 +6,9 @@
 
 <br>
 
+## 배포 사이트 
+http://mygradients.s3-website.ap-northeast-2.amazonaws.com/gradation/#strawberry
+
 ## 팀 : 멋쟁이 짱돌
 
 - 박정훈 / 맹하령 / 안예은 / 황나희
