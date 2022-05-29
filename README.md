@@ -4,7 +4,6 @@
 
 
 ## 🎨배포 사이트
-
  * [my Gradients](http://mygradients.s3-website.ap-northeast-2.amazonaws.com/gradation/#strawberry)
 
 ## 🎨프로젝트 개요
